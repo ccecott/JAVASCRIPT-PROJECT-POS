@@ -1,52 +1,130 @@
-div {
-    border: 1px solid black;
-    padding: 3px;
-}
+/* Default Resets */
+
 body, h1, h2 {
     margin: 0;
     
-};
-
-* {
-    border: 1px solid black;
-    padding: 3px;
 }
-
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: unset;
 }
 
-/* .background-image {
-    height: 200px;
-} */
+
+
+/* Fonts */
+.full-body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* That good good */
+.full-body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
 
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 7.5%;
+    font-family: 'Righteous', cursive;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 20px;
+    padding-left: 20vw;
+    width: 100%;
+    max-width: 1200px;
+    background-image: url("./POS_Assets/ZoomLogo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100px;
 }
 
-.head {
-    width: 85%;
-    max-width: 85%;
+/* .header::before{
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  z-index: -3;
+  background: url("./POS_Assets/ZoomLogo.png");
+  background-size: cover;
+  transform: rotate(90deg);
+} */
+
+/* .ZoomLogo{
+  position: absolute;
+  z-index:-10;
+  object-fit: cover;
+} */
+
+.subtitle{
+  font-size: 20px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.title {
+  font-size: 60px;
+  color: #0E71EB;
+  text-shadow: 1px 1px 1px black;
+  text-shadow: 5px 5px 10px black;
 }
 
 .pos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .items {
+    border: 1px solid black;
+    font-size: 22px;
     width: 85%;
     margin-bottom: 30px;
     text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.backgrounds {
+  background-image: url(./POS_Assets/Forest.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px
+}
+.extensions{
+  margin-top: 25px;
+  background-image: url(./POS_Assets/EXTRA.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+}
+
+.products {
+  margin-top: 25px;
+  background-image: url(./POS_Assets/fakejake.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .checkout {
-    position: fixed;
-    
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 85vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.fas {
+  font-size: 20px;
+  color: rgb(56, 56, 56);
 }
 
