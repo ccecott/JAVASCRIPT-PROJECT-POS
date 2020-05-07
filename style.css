@@ -1,0 +1,52 @@
+div {
+    border: 1px solid black;
+    padding: 3px;
+}
+body, h1, h2 {
+    margin: 0;
+    
+};
+
+* {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .background-image {
+    height: 200px;
+} */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 7.5%;
+}
+
+.head {
+    width: 85%;
+    max-width: 85%;
+}
+
+.pos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    width: 85%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.checkout {
+    position: fixed;
+    
+}
+
