@@ -34,21 +34,27 @@ a {
     padding-left: 20vw;
     width: 100%;
     max-width: 1200px;
-    background-image: url("./POS_Assets/ZoomLogo.png");
-    background-size: cover;
+    /* background-image: url("./POS_Assets/ZoomLogo.png"); */
+    /* background-size: cover;
     background-repeat: no-repeat;
     background-position: 100px;
+     */
 }
 
-/* .header::before{
+.header::before{
+    content: "";
   position: absolute;
   height: 200px;
   width: 400px;
-  z-index: -3;
+  z-index: -10;
   background: url("./POS_Assets/ZoomLogo.png");
   background-size: cover;
-  transform: rotate(90deg);
-} */
+  transform: rotate(30deg);
+  display: block;
+    left: 65vw;
+  bottom: 0vh;
+   
+}
 
 /* .ZoomLogo{
   position: absolute;
@@ -74,6 +80,7 @@ a {
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
+    z-index: 1;
 }
 
 .items {
