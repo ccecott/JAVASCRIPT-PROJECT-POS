@@ -120,11 +120,95 @@ a {
 .button {
   width: 40px;
   height: 40px;
-  background-color: white;
+  background: none;
+  border: none;
 }
 
 .fas {
   font-size: 20px;
   color: rgb(56, 56, 56);
+}
+
+@media only screen and (min-width:768px) {
+    body {
+        background-color: #f8f8f8;
+       
+    }
+    .full-body {
+        flex-direction: row;
+    }
+    .header {
+        flex: 1;
+        max-width: 200%;
+        padding-left: 0px;
+        /* background-image: none; */
+        /* background-position: 0px;
+        background-size: fill; */
+        left: 0;
+        transform: translateX(0);
+        background-image: url("./POS_Assets/ZoomLogo.png");
+        background-size: fill;
+        background-repeat: no-repeat;
+        float: left;
+        background-position: center;
+        
+    }
+    .head {
+        padding-left: 100px;
+    }
+    .title {
+        padding-top: 75px;
+        font-size: 120px;
+    }
+    .subtitle {
+        font-size: 40px;
+    }
+    
+    
+    .pos {
+        flex: 1;
+        max-width: 50vw;
+        height: 100vh;
+        background-color: #c8ddff;
+       justify-content: center;
+       padding: 100px;
+        /* padding: 20px 0; */
+    }
+    .checkout {
+        /* display: block; */
+        justify-content: flex-end;
+       position: fixed;
+        width: 100vw;
+        left: 0;
+        transform: translateX(0);
+        
+    }
+    .button {
+        
+        margin-top: 40px;
+        
+    }
+    .cart {
+        margin-right: 10vw;
+        margin-left: 40px;
+    }
+    .items {
+        margin-bottom: auto;
+        margin-top: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 44px;
+        min-width: 40vw;
+    }
+    
+    .extensions {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+  
+    
+
+    
 }
 
