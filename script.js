@@ -60,15 +60,31 @@ let cartDeets = document.querySelector(".checkout-deets");
 let cart = document.querySelector(".fa-shopping-cart");
 
 fullBody.addEventListener("click", (event) => {
-  if (event.target.classList.contains("add-to-cart")) {
-    let cartItem = document.createElement("div");
-    let titleP = document.createElement("p");
-    let title = event.target.getAttribute("data-title");
-    titleP.innerText = title;
-    let priceP = document.createElement("p");
-    let price = event.target.getAttribute("data-price");
-    priceP.innerText = price;
-    cartItem.append(titleP, priceP);
-    cartDeets.append(cartItem);
-  }
-})
+    if (event.target.classList.contains("add-to-cart")) {
+        let cartItem = document.createElement("div");
+        let titleP = document.createElement("p");
+        let title = event.target.getAttribute("data-title");
+        titleP.innerText = title;
+        let priceP = document.createElement("p");
+        let price = event.target.getAttribute("data-price");
+        priceP.classList.add("price");
+        priceP.innerText = price;
+        cartItem.append(titleP, priceP);
+        cartDeets.append(cartItem);
+    }
+});
+
+
+
+let currentSubTotal = 0;
+let subTotal = document.querySelector(".subtotal");
+let cartContainer = document.querySelector(".cart-container");
+
+fullBody.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add-to-cart")) {
+        let amount = Number(event.target.getAttribute("data-price"));
+        currentSubTotal += amount;
+        subTotal.innerText = `Subtotal $${currentSubTotal.toFixed(2)}`;
+    }
+});
+
