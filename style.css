@@ -52,8 +52,7 @@ a {
   transform: rotate(30deg);
   display: block;
     left: 65vw;
-  bottom: 0vh;
-   
+  bottom: 0vh; 
 }
 
 /* .ZoomLogo{
@@ -110,7 +109,7 @@ a {
 
 .products {
   margin-top: 25px;
-  background-image: url(./POS_Assets/fakejake.jpg);
+  background-image: url(./POS_Assets/fakeyou.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -131,11 +130,21 @@ a {
   border: none;
 }
 
-.fas {
+.cart {
   font-size: 20px;
   color: rgb(56, 56, 56);
 }
-.pop {
+.about{
+  font-size: 20px;
+  color: rgb(56, 56, 56);
+}
+.exit {
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  right: 1px;
+}
+.bpop {
   background-color: rgba(0,0,0,.8);
   /* possibly need to change to fixed, problem with absolute and relative??  */
   position: absolute;
@@ -154,6 +163,13 @@ a {
    width: 83vw;
    height: 70vh;
    padding: auto;
+ }
+ .checkout-style{
+  background-color: rgba(0,0,0,.8);
+  /* possibly need to change to fixed, problem with absolute and relative??  */
+  display: none;
+  justify-content: stretch;
+  align-items: center;
  }
  .info {
    color: white;
@@ -204,7 +220,6 @@ a {
         background-repeat: no-repeat;
         float: left;
         background-position: center;
-        
     }
     .head {
         padding-left: 100px;
