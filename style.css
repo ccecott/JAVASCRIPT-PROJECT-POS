@@ -176,6 +176,32 @@ a {
   transform: translate(-50%,-50%);
   border-radius: 30px;
 }
+.epop {
+  background-color: rgba(0,0,0,.8);
+  /* possibly need to change to fixed, problem with absolute and relative??  */
+  position: absolute;
+  display: none;
+  height: 80vh;
+  width: 85vw;
+  z-index: 20;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%,-50%);
+  border-radius: 30px;
+}
+.ppop {
+  background-color: rgba(0,0,0,.8);
+  /* possibly need to change to fixed, problem with absolute and relative??  */
+  position: absolute;
+  display: none;
+  height: 80vh;
+  width: 85vw;
+  z-index: 20;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%,-50%);
+  border-radius: 30px;
+}
  .column-style {
    display: flex;
    flex-direction: column;
