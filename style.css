@@ -148,6 +148,39 @@ a {
   transform: translate(-50%,-50%);
   border-radius: 30px;
 }
+ .column-style {
+   display: flex;
+   flex-direction: column;
+   width: 83vw;
+   height: 70vh;
+   padding: auto;
+ }
+ .info {
+   color: white;
+   text-align: center;
+ }
+
+ .item-title {
+   font-size: 20px;
+   margin: 3px;
+ }
+
+ .product-info {
+   font-size: 15px;
+   margin: 1px;
+ }
+
+ .side-by-side {
+   display: flex;
+   margin: 20px;
+ }
+
+.image {
+  width: 150px;
+  height: auto;
+  /* ^ fix this please! */
+  margin: 7px;
+}
 
 @media only screen and (min-width:768px) {
     body {

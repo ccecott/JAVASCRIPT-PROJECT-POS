@@ -12,4 +12,12 @@ extensionsPop.addEventListener("click", addFunc);
 let productsPop = document.querySelector(".products-popup");
 productsPop.addEventListener("click", addFunc);
 
+let body = document.querySelector(".full-body");
+
+body.addEventListener("click", (e) => {
+    if (e.target.classList.contains("body")) {
+        // e.target.removeEventListener();
+        popup.style.display = "none"
+    }
+});
 
