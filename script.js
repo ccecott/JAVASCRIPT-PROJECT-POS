@@ -1,12 +1,13 @@
 // Popup Menus and whatever
 // Backgrounds popup menu
+let fullBody = document.querySelector(".full-body");
 let bpop = document.querySelector(".bpop");
 let backgroundPop = document.querySelector(".background-popup");
 const addFuncBpop = () => {
-  bpop.style.display = "flex";
+    bpop.style.display = "flex";
 }
 const removeFuncBpop = () => {
-  bpop.style.display = "none";
+    bpop.style.display = "none";
 }
 backgroundPop.addEventListener("click", addFuncBpop);
 
@@ -34,9 +35,9 @@ backgroundPop.addEventListener("click", addFuncBpop);
 
 // Checkout Popup
 let cpop = document.querySelector(".fa-shopping-cart");
-let checkoutPop = document.querySelector(".checkout-style");
+let checkoutPop = document.querySelector(".cart-container");
 const addFuncCpop = () => {
-  checkoutPop.style.display = "flex";
+    checkoutPop.style.display = "flex";
 }
 // const removeFuncCpop = () => {
 //   cpop.style.display = "none";
@@ -48,17 +49,21 @@ let exitButton = document.querySelector(".fa-times");
 exitButton.addEventListener("click", removeFuncBpop);
 
 // Cart and Checkout functions and such
-let addToCart = document.querySelectorAll(".add-to-cart");
+
 let cartDeets = document.querySelector(".checkout-deets");
 let cart = document.querySelector(".fa-shopping-cart");
 
-addToCart.addEventListener("click", (event) => {
-  addToCart.forEach(() => {
-    let title = event.target.getAttribute("data-title");
-    let info = event.target.getAttribute("data-info");
-    let price = event.target.getAttribute("data-price");
-    let cartItem = document.createElement("div");
-    cartItem.append(title, price);
-    cartDeets.append(cartItem);
-  })
+fullBody.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add-to-cart")) {
+        let cartItem = document.createElement("div");
+        let titleP = document.createElement("p");
+        let title = event.target.getAttribute("data-title");
+        titleP.innerText = title;
+        let priceP = document.createElement("p");
+        let price = event.target.getAttribute("data-price");
+        priceP.innerText = price;
+        cartItem.append(titleP, priceP);
+        cartDeets.append(cartItem);
+    }
+
 })

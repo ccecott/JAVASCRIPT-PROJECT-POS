@@ -114,7 +114,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.checkout {
+.footer {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -133,6 +133,25 @@ a {
 .cart {
   font-size: 20px;
   color: rgb(56, 56, 56);
+}
+.cart-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 21;
+  
+}
+
+.checkout-deets {
+  width: 60%;
+  color: white;
+  
 }
 .about{
   font-size: 20px;
@@ -165,11 +184,19 @@ a {
    padding: auto;
  }
  .checkout-style{
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   /* possibly need to change to fixed, problem with absolute and relative??  */
-  display: none;
-  justify-content: stretch;
-  align-items: center;
+  display: flex;
+  position: absolute;
+  height: 80vh;
+  width: 85vw;
+  z-index: 20;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%,-50%);
+  border-radius: 30px;
+  
+  
  }
  .info {
    color: white;
@@ -242,7 +269,8 @@ a {
        padding: 100px;
         /* padding: 20px 0; */
     }
-    .checkout {
+   
+    .footer {
         /* display: block; */
         justify-content: flex-end;
        position: fixed;
