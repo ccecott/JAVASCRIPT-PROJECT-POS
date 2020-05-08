@@ -163,6 +163,7 @@ a {
   position: fixed;
   right: 1px;
 }
+
 .bpop {
   background-color: rgba(0,0,0,.8);
   /* possibly need to change to fixed, problem with absolute and relative??  */
