@@ -55,6 +55,15 @@ const removeFuncCpop = () => {
 }
 cpop.addEventListener("click", addFuncCpop);
 
+// Receipt Popup
+let rButton = document.querySelector(".rpop");
+
+fullBody.addEventListener("click", (event) => {
+  if (event.target.classList.contains("receipt-button")) {
+    rButton.style.display = "flex";
+  }
+})
+
 // Exit button for Popup menus
 let bexitButton = document.querySelector(".bexit");
 bexitButton.addEventListener("click", removeFuncBpop);
@@ -137,3 +146,24 @@ fullBody.addEventListener("click", (event) => {
     creditButton.style.display = "flex";
   }
 })
+
+// Receipt good good
+let receiptDeets = document.querySelector(".receipt")
+
+
+fullBody.addEventListener("click", (event) => {
+  if (event.target.classList.contains("add-to-cart")) {
+    let receiptItem = document.createElement("div");
+    receiptItem.classList.add("receiptItems")
+    let titleP = document.createElement("p");
+    titleP.classList.add("receiptItemTitle")
+    let title = event.target.getAttribute("data-title");
+    titleP.innerText = title;
+    let priceP = document.createElement("p");
+    let price = event.target.getAttribute("data-price");
+    priceP.classList.add("price");
+    priceP.innerText = `$${price}`;
+    receiptItem.append(titleP, priceP);
+    receiptDeets.append(receiptItem);
+  }
+});
