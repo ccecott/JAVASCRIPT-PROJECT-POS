@@ -114,6 +114,13 @@ a {
   background-repeat: no-repeat;
 }
 
+.merch {
+  margin-top: 25px;
+  background-image: url(./POS_Assets/ArthurFist.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .footer {
     display: flex;
     position: relative;
@@ -203,14 +210,27 @@ a {
   transform: translate(-50%,-50%);
   border-radius: 30px;
 }
- .column-style {
+.mpop {
+  background-color: rgba(0,0,0,.8);
+  /* possibly need to change to fixed, problem with absolute and relative??  */
+  position: absolute;
+  display: none;
+  height: 80vh;
+  width: 85vw;
+  z-index: 20;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%,-50%);
+  border-radius: 30px;
+}
+.column-style {
    display: flex;
    flex-direction: column;
    width: 83vw;
    height: 70vh;
    padding: auto;
  }
- .checkout-style{
+.checkout-style{
   background-color: rgba(0, 0, 0, 0.8);
   /* possibly need to change to fixed, problem with absolute and relative??  */
   display: flex;
@@ -243,25 +263,25 @@ a {
    justify-content: center;
    align-items: center;
  }
- .info {
+.info {
    color: white;
    text-align: center;
- }
+}
 
- .item-title {
+.item-title {
    font-size: 20px;
    margin: 3px;
- }
+}
 
- .product-info {
+.product-info {
    font-size: 15px;
    margin: 1px;
- }
+}
 
- .side-by-side {
+.side-by-side {
    display: flex;
    margin: 20px;
- }
+}
 
 .image {
   width: 150px;
@@ -273,7 +293,6 @@ a {
 @media only screen and (min-width:768px) {
     body {
         background-color: #f8f8f8;
-       
     }
     .full-body {
         flex-direction: row;
@@ -303,8 +322,6 @@ a {
     .subtitle {
         font-size: 40px;
     }
-    
-    
     .pos {
         flex: 1;
         max-width: 50vw;
@@ -314,7 +331,23 @@ a {
        padding: 100px;
         /* padding: 20px 0; */
     }
-   
+    .column-style {
+      display: flex;
+      flex-direction: column;
+      width: 83vw;
+      height: 80vh;
+      padding: auto;
+    }
+   .side-by-side{
+     justify-content: space-evenly;
+     align-items: center;
+     margin: auto;
+     margin-left: 25%;
+   }
+   .info {
+    color: white;
+    text-align: left;
+   }
     .footer {
         /* display: block; */
         justify-content: flex-end;
@@ -322,12 +355,10 @@ a {
         width: 100vw;
         left: 0;
         transform: translateX(0);
-        
+        z-index: 100;
     }
     .button {
-        
         margin-top: 40px;
-        
     }
     .cart {
         margin-right: 10vw;
@@ -341,15 +372,12 @@ a {
         font-size: 44px;
         min-width: 40vw;
     }
-    
-    .extensions {
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .exit {
+      font-size: 20px;
+      color: white;
+      position: fixed;
+      right: 1px;
+      margin-top:1px;
     }
-    
-
-    
-
-    
 }
 
