@@ -79,7 +79,9 @@ let cart = document.querySelector(".fa-shopping-cart");
 fullBody.addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart")) {
     let cartItem = document.createElement("div");
+    cartItem.classList.add("cartItems")
     let titleP = document.createElement("p");
+    titleP.classList.add("cartItemTitle")
     let title = event.target.getAttribute("data-title");
     titleP.innerText = title;
     let priceP = document.createElement("p");
