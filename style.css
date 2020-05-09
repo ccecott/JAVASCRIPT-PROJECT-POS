@@ -248,6 +248,7 @@ a {
  .cartItems{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
  }
 .payment-method {
   display: inline-block;

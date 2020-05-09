@@ -87,7 +87,7 @@ fullBody.addEventListener("click", (event) => {
     let priceP = document.createElement("p");
     let price = event.target.getAttribute("data-price");
     priceP.classList.add("price");
-    priceP.innerText = price;
+    priceP.innerText = `$${price}`;
     cartItem.append(titleP, priceP);
     cartDeets.append(cartItem);
   }
