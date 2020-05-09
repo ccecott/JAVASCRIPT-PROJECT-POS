@@ -81,25 +81,27 @@ fullBody.addEventListener("click", (event) => {
 
 let currentSubTotal = 0;
 let subTotal = document.querySelector(".subtotal");
+let cartContainer = document.querySelector(".cart-container");
+let addToCart = document.querySelector(".add-to-cart");
 let currentTax = 0;
 let tax = document.querySelector(".tax");
 let currentTotal = 0;
 let total = document.querySelector(".total");
-let cartContainer = document.querySelector(".cart-container");
+
+
+
 
 fullBody.addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart")) {
     let amount = Number(event.target.getAttribute("data-price"));
     currentSubTotal += amount;
     subTotal.innerText = `Subtotal $${currentSubTotal.toFixed(2)}`;
-  }
+    currentTax = currentSubTotal * .06;
+    tax.innerText = `Tax $${currentTax.toFixed(2)}`;
+    currentTotal = currentSubTotal + currentTax;
+    total.innerText = `Total $${currentTotal.toFixed(2)}`;
+  };
 });
 
-fullBody.addEventListener("click", (event) => {
-  if (event.target.classList.contains("add-to-cart")) {
-    let taxAmount = Number(event.target.getAttribute("data-price"));
-    currentTax = taxAmount *= .06;
-    tax.innerText = `Tax $${currentTax.toFixed(2)}`;
-  }
-});
+
 
