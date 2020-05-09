@@ -117,3 +117,20 @@ fullBody.addEventListener("click", (event) => {
   }
 });
 
+
+// payment method and buttons
+
+let cashButton = document.querySelector(".cash-form");
+
+fullBody.addEventListener("click", (event) => {
+  if (event.target.classList.contains("cash-button")) {
+    cashButton.style.display = "flex";
+  }
+})
+
+let creditButton = document.querySelector(".credit-form");
+fullBody.addEventListener("click", (event) => {
+  if (event.target.classList.contains("credit-button")) {
+    creditButton.style.display = "flex";
+  }
+})
