@@ -33,6 +33,17 @@ const removeFuncPpop = () => {
 }
 productsPop.addEventListener("click", addFuncPpop);
 
+// Merch popup menu
+let mpop = document.querySelector(".mpop");
+let merchPop = document.querySelector(".merch-popup");
+const addFuncMpop = () => {
+  mpop.style.display = "flex";
+}
+const removeFuncMpop = () => {
+  mpop.style.display = "none";
+}
+merchPop.addEventListener("click", addFuncMpop);
+
 // Checkout Popup
 let cpop = document.querySelector(".fa-shopping-cart");
 let checkoutPop = document.querySelector(".cart-container");
@@ -53,6 +64,9 @@ eexitButton.addEventListener("click", removeFuncEpop);
 
 let pexitButton = document.querySelector(".pexit");
 pexitButton.addEventListener("click", removeFuncPpop);
+
+let mexitButton = document.querySelector(".mexit");
+mexitButton.addEventListener("click", removeFuncMpop);
 
 let cexitButton = document.querySelector(".cexit");
 cexitButton.addEventListener("click", removeFuncCpop);
