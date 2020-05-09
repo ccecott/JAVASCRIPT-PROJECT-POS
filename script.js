@@ -116,6 +116,7 @@ let total = document.querySelector(".total");
 
 
 
+
 fullBody.addEventListener("click", (event) => {
   if (event.target.classList.contains("add-to-cart")) {
     let amount = Number(event.target.getAttribute("data-price"));
@@ -127,6 +128,46 @@ fullBody.addEventListener("click", (event) => {
     total.innerText = `Total $${currentTotal.toFixed(2)}`;
   };
 });
+
+
+//receipt js
+let rCurrentSubTotal = 0;
+let rSubTotal = document.querySelector(".r-subtotal");
+//let rCartContainer = document.querySelector(".cart-container");
+// let addToCart = document.querySelector(".add-to-cart");
+let rCurrentTax = 0;
+let rTax = document.querySelector(".r-tax");
+let rCurrentTotal = 0;
+let rTotal = document.querySelector(".r-total");
+
+
+
+
+
+fullBody.addEventListener("click", (event) => {
+  if (event.target.classList.contains("add-to-cart")) {
+    let amount = Number(event.target.getAttribute("data-price"));
+    rCurrentSubTotal += amount;
+    rSubTotal.innerText = `Subtotal $${rCurrentSubTotal.toFixed(2)}`;
+    rCurrentTax = rCurrentSubTotal * .06;
+    rTax.innerText = `Tax $${rCurrentTax.toFixed(2)}`;
+    rCurrentTotal = rCurrentSubTotal + rCurrentTax;
+    rTotal.innerText = `Total $${rCurrentTotal.toFixed(2)}`;
+  };
+});
+
+// let cashGiven = document.querySelector(".amount-taken");
+// let change = document.querySelector(".change");
+// let creditCard = document.querySelector(".credit-card");
+// let currentChange = 0;
+
+// fullBody.addEventListener("click", (e) => {
+//   if (event.target.classList.contains("cash-button")) {
+//     let cashAmount = Number(e.target.getAttribute("BUTTON")[0].attributes[0].value);
+//     currentChange = subTotal - cashAmount;
+//     change.innerText = `Change: $${currentChange}`;
+//   }
+// })
 
 
 
