@@ -188,6 +188,15 @@ fullBody.addEventListener("click", (event) => {
   }
 })
 
+let cashCheck = document.querySelector(".cash-check");
+
+fullBody.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (event.target.classList.contains("cash-check")) {
+    rpop.style.display = "flex";
+  }
+})
+
 // Receipt good good
 let receiptDeets = document.querySelector(".receipt")
 
@@ -208,3 +217,35 @@ fullBody.addEventListener("click", (event) => {
     receiptDeets.append(receiptItem);
   }
 });
+
+let cashForm = document.querySelector(".cash-form");
+let amountCash = document.querySelector(".amount-taken");
+let change = document.querySelector(".change");
+
+cashForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let data = new FormData(cashForm)
+  let amountPaid = Number(data.get("cash-amount"));
+  amountCash.innerText = `Cash: $${amountPaid.toFixed(2)}`;
+  let difference = amountPaid - rCurrentTotal;
+  change.innerText = `Change: $${difference.toFixed(2)}`;
+  // console.log(difference);
+  // console.log(amountTaken);
+  // if (event.target.classList("cash-check")) {
+  //   let cashAmount = Number(document.getElementById("cash-amount").value);
+  //   let amountTaken = document.querySelector(".amount-taken");
+  //   amountTaken.innerText = `Cash: $${cashAmount}`;
+
+  // }
+})
+
+let creditForm = document.querySelector(".credit-form");
+let totalSubtotal = document.querySelector(".total_subtotal");
+
+creditForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let creditPaid = document.createElement("p");
+  creditPaid.classList.add("credit-paid");
+  creditPaid.innerText = `Thank you for your payment`;
+  totalSubtotal.append(creditPaid);
+})
