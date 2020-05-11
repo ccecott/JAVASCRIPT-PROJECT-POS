@@ -51,7 +51,7 @@ a {
   background-size: cover;
   transform: rotate(30deg);
   display: block;
-    left: 65vw;
+    left: 50vw;
   bottom: 0vh; 
 }
 
@@ -236,6 +236,19 @@ a {
   transform: translate(-50%,-50%);
   border-radius: 30px;
 }
+.receiptTitle{
+  position: fixed;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.receiptItems{
+  display: flex;
+  position: relative;
+  top: 25px;
+  left: 10px;
+  justify-content: space-between;
+}
 .column-style {
    display: flex;
    flex-direction: column;
@@ -262,11 +275,15 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
  }
 .payment-method {
   display: inline-block;
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   right: 10px;
 }
 
@@ -318,6 +335,43 @@ a {
   /* ^ fix this please! */
   margin: 7px;
 }
+.credit-paid{
+  position: fixed;
+    bottom: .5px;
+    margin-bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.subtotal{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.tax{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.total{
+  margin-top: 1px;
+}
+.r-subtotal{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.r-tax{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.r-total{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.amount-taken{
+  margin-top: 1px;
+    margin-bottom: 1px;
+}
+.change{
+  margin-top: 1px;
+}
 
 @media only screen and (min-width:768px) {
     body {
@@ -367,6 +421,10 @@ a {
       height: 80vh;
       padding: auto;
     }
+    .receipt{
+      width: 100vw;
+      margin-right: 20px;
+    }
    .side-by-side{
      justify-content: space-evenly;
      align-items: center;
@@ -380,7 +438,7 @@ a {
     .footer {
         /* display: block; */
         justify-content: flex-end;
-       position: fixed;
+       position: absolute;
         width: 100vw;
         left: 0;
         transform: translateX(0);
