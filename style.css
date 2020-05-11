@@ -224,7 +224,7 @@ a {
   border-radius: 30px;
 }
 .rpop {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   /* possibly need to change to fixed, problem with absolute and relative??  */
   position: absolute;
   display: none;
@@ -235,6 +235,7 @@ a {
   top: 50%;
   transform: translate(-50%,-50%);
   border-radius: 30px;
+  color: black;
 }
 .receiptTitle{
   position: fixed;
@@ -276,6 +277,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  top: 15px;
   margin-top: 15px;
   margin-left: 10px;
   margin-right: 10px;
